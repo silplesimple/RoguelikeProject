@@ -6,9 +6,9 @@ public class ProjectileManager : MonoBehaviour
 {
     [SerializeField] private ParticleSystem _impactParticleSystem;
 
-    [SerializeField] private GameObject testObj;
-
     public static ProjectileManager instance;
+
+    private ObjectPool objectPool;
 
     private void Awake()
     {
@@ -17,12 +17,12 @@ public class ProjectileManager : MonoBehaviour
 
     void Start()
     {
-        
+        objectPool = GetComponent<ObjectPool>();
     }
 
     public void ShootBullet(Vector2 startPosition, Vector2 direction, RangedAttackData attackData)
     {
-        GameObject obj = Instantiate(testObj);
+        GameObject obj = objectPool.SpawnFromPool(attackData.bulletNameTag);
 
         obj.transform.position = startPosition;
         RangedAttackController attackController = obj.GetComponent<RangedAttackController>();

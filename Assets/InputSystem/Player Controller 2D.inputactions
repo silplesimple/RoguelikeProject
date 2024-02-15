@@ -1,5 +1,5 @@
 {
-    "name": "PlayerInput",
+    "name": "Player Controller 2D",
     "maps": [
         {
             "name": "Player",
@@ -27,6 +27,15 @@
                     "name": "Fire",
                     "type": "Value",
                     "id": "31ca2537-ae81-4f5b-9f8e-b1e78b0bfd08",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Skill",
+                    "type": "Value",
+                    "id": "e7c6b3ea-de49-463a-ab4c-5ccd655694de",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -108,6 +117,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "87349bc7-629a-4b70-baab-d954a92f7992",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Skill",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

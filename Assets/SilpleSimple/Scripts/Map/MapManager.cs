@@ -5,7 +5,7 @@ using UnityEngine;
 public class MapManager : MonoBehaviour
 {
     public static MapManager instance;
-    [SerializeField] private GameObject roomprf;
+    [SerializeField] private GameObject Map;
     public GameObject monster;
     public int monsterIndex=0;
     private Vector3 SpawnPoint;
@@ -36,6 +36,6 @@ public class MapManager : MonoBehaviour
     private void CreateMap()
     {
         SpawnPoint = new Vector3(0, 0);
-        Instantiate(roomprf, SpawnPoint, Quaternion.identity);
+        Instantiate(Map, SpawnPoint, Quaternion.identity);
     }
 }

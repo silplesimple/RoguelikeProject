@@ -19,14 +19,7 @@ public class HealthController : MonoBehaviour
         qtdLife = life.Length;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {                           //Case of Bullet
-        if (other.tag == "Monster")
-        {
-
-            Hurt();
-        }
-    }
+   
 
     void OnCollisionEnter2D(Collision2D other)
     {                       //Case of Touch

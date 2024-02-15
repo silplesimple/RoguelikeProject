@@ -25,6 +25,7 @@ public class Floor : MonoBehaviour
                 MapManager.instance.CreateMonster(gameObject.transform.position);
                 enterPlayer = true;
             }
+            CameraManager.instance.MoveCamera(gameObject.transform.position.x, gameObject.transform.position.y,-10);
         }
     }
 

@@ -75,4 +75,13 @@ public class HealthSystem : MonoBehaviour
     {
         OnDeath?.Invoke();
     }
+
+    public void RestoreHealth(int amount)
+    {
+        bool healthChanged = ChangeHealth(amount);
+        if (healthChanged)
+        {
+            OnHeal?.Invoke();
+        }
+    }
 }

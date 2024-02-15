@@ -43,10 +43,33 @@ public class MapManager : MonoBehaviour
 
     public void CreateRandomItem()
     {
-        Vector2 randomPosition = new Vector2(Random.Range(-6f, 6f), Random.Range(-4f, 4f)); // 랜덤 위치 생성
+        Vector2 randomPosition = new Vector2(Random.Range(-6f, 6f), Random.Range(-4f, 4f));
+
         if (itemPrefab != null)
         {
-            Instantiate(itemPrefab, randomPosition, Quaternion.identity);
+            GameObject newItem = Instantiate(itemPrefab, randomPosition, Quaternion.identity);
+     
+            HealthRestoreItem healthRestoreItem = newItem.GetComponent<HealthRestoreItem>();
+
+            if (healthRestoreItem != null)
+            {
+       
+                healthRestoreItem.OnPickup += PlayerPickedUpItem;
+            }
         }
     }
+
+    private void PlayerPickedUpItem(int restorationAmount)
+    {
+      
+        HealthSystem playerHealth = FindObjectOfType<HealthSystem>().GetComponent<HealthSystem>();
+
+        if (playerHealth != null)
+        {
+          
+            playerHealth.RestoreHealth(restorationAmount);
+        }
+    }
+
+
 }

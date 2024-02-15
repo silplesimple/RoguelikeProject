@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7becf30dba593d4419bf87c9741b8a32, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 7777564424441491274}
   - component: {fileID: 3014517659639328135}
   m_Layer: 6
-  m_Name: Monster (3)
+  m_Name: Monster_1
   m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -251,8 +251,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 576961d7f68fa8e44a7b19f603df84cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followRange: 20
   enemyAttackData: {fileID: 11400000, guid: 54352bfdedd4ddc45a2d9cde10a5e281, type: 2}
+  followRange: 20
   characterRenderer: {fileID: 4516866267632335530}
 --- !u!114 &3014517659639328135
 MonoBehaviour:

@@ -32,7 +32,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: knight_f_idle_anim_f0
+  m_Name: player_Idle_startScene
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:

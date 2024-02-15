@@ -155,6 +155,7 @@ MonoBehaviour:
   Map: {fileID: 5499779902412023820, guid: 3154fbd5abc87dc45b4b319ea0df24d3, type: 3}
   monster: {fileID: 2203410884060838043, guid: fc03afc8c4006b447816640ed97d5fe4, type: 3}
   monsterIndex: 0
+  itemPrefab: {fileID: 2919680675615274376, guid: b848f0610a38c0c47a92f7c39d203aa2, type: 3}
 --- !u!4 &340409180
 Transform:
   m_ObjectHideFlags: 0
@@ -628,6 +629,7 @@ MonoBehaviour:
     statsChangeType: 0
     maxHealth: 10
     speed: 5
+    healthRestorationAmount: 0
     attackSO: {fileID: 11400000, guid: 7ae25dd2045519f43a5c14e3d5c4111b, type: 2}
   statsModifiers: []
 --- !u!114 &1837453790

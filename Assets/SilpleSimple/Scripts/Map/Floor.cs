@@ -7,6 +7,7 @@ public class Floor : MonoBehaviour
     private bool monsterPresent = false;
     private bool enterPlayer = false;
     private int livingEnemyIndex = 0;
+    public Transform doorTransform ;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -46,17 +47,17 @@ public class Floor : MonoBehaviour
     
     private void FixedUpdate()
     {
-        if (!monsterPresent)
-            OpenDoor(false);
-        else if(monsterPresent)
-            OpenDoor(true);
+        OpenDoor();
     }
-    private void OpenDoor(bool door){
-        
-        Transform doorTransform = transform.Find("Door");
+    
+    private void OpenDoor(){
+        doorTransform = transform.Find("Door");
         if (doorTransform != null)
-        {           
-            doorTransform.gameObject.SetActive(door);            
+        {
+            if (!monsterPresent)
+                doorTransform.gameObject.SetActive(false);
+            else if (monsterPresent)
+                doorTransform.gameObject.SetActive(true);
         }
     }
 }

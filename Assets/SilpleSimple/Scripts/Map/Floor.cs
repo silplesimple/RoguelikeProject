@@ -7,25 +7,27 @@ public class Floor : MonoBehaviour
     private bool monsterPresent = false;
     private bool enterPlayer = false;
     private int livingEnemyIndex = 0;
+    public Transform doorTransform ;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Monster"))
         {
-            monsterPresent = true;
-        }
+            monsterPresent = true;           
+        }        
 
-        if (other.CompareTag("Player"))
+        if(other.CompareTag("Player"))
         {
-            if (!enterPlayer)
+            if(!enterPlayer)
             {
-                Debug.Log("플레이어가 밟았다!enterPlayer" + enterPlayer);
+                Debug.Log("플레이어가 밟았다!enterPlayer"+enterPlayer);
                 MapManager.instance.monsterIndex++;
                 livingEnemyIndex = MapManager.instance.monsterIndex;
                 MapManager.instance.CreateMonster(gameObject.transform.position);
+                MapManager.instance.CreateRandomItem(gameObject.transform.position);
                 enterPlayer = true;
             }
-            CameraManager.instance.MoveCamera(gameObject.transform.position.x, gameObject.transform.position.y, -10);
+            CameraManager.instance.MoveCamera(gameObject.transform.position.x, gameObject.transform.position.y,-10);
         }
     }
 
@@ -34,30 +36,29 @@ public class Floor : MonoBehaviour
         if (other.CompareTag("Monster"))
         {
             livingEnemyIndex--;
-            if (livingEnemyIndex == 0)
-                monsterPresent = false;
+            if( livingEnemyIndex == 0 )
+            monsterPresent = false;           
         }
     }
 
     private void Start()
     {
-
+        
     }
-
+    
     private void FixedUpdate()
     {
-        if (!monsterPresent)
-            OpenDoor(false);
-        else if (monsterPresent)
-            OpenDoor(true);
+        OpenDoor();
     }
-    private void OpenDoor(bool door)
-    {
-
-        Transform doorTransform = transform.Find("Door");
+    
+    private void OpenDoor(){
+        doorTransform = transform.Find("Door");
         if (doorTransform != null)
         {
-            doorTransform.gameObject.SetActive(door);
+            if (!monsterPresent)
+                doorTransform.gameObject.SetActive(false);
+            else if (monsterPresent)
+                doorTransform.gameObject.SetActive(true);
         }
     }
 }

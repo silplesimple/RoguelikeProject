@@ -24,6 +24,7 @@ public class Floor : MonoBehaviour
                 MapManager.instance.monsterIndex++;
                 livingEnemyIndex = MapManager.instance.monsterIndex;
                 MapManager.instance.CreateMonster(gameObject.transform.position);
+                MapManager.instance.CreateRandomItem(gameObject.transform.position);
                 enterPlayer = true;
             }
             CameraManager.instance.MoveCamera(gameObject.transform.position.x, gameObject.transform.position.y,-10);

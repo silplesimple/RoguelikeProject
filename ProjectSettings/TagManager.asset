@@ -8,6 +8,7 @@ TagManager:
   - Item
   - Monster
   - Floor
+  - Life
   layers:
   - Default
   - TransparentFX

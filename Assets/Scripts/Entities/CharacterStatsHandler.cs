@@ -134,7 +134,7 @@ public class CharacterStatsHandler : MonoBehaviour
         stat = Mathf.Max(stat, minVal);
     }
 
-    private void LimitAllStats()
+    public void LimitAllStats()
     {
         if(CurrentStats == null || CurrentStats.attackSO == null)
         {

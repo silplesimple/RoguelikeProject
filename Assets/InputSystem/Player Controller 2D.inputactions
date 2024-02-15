@@ -34,11 +34,11 @@
                 },
                 {
                     "name": "Skill",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "f8b364d0-4205-4545-a7f9-dcd45bb77f8c",
-                    "expectedControlType": "",
+                    "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Tap",
+                    "interactions": "",
                     "initialStateCheck": true
                 }
             ],

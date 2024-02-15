@@ -508,7 +508,7 @@ GameObject:
   - component: {fileID: 620215437}
   - component: {fileID: 620215436}
   - component: {fileID: 620215435}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall_BoxColieder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7282,9 +7282,8 @@ GameObject:
   - component: {fileID: 1658442206}
   - component: {fileID: 1658442210}
   - component: {fileID: 1658442209}
-  - component: {fileID: 1658442208}
   - component: {fileID: 1658442207}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -7342,18 +7341,6 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
---- !u!114 &1658442208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1658442205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3898ee683fe3944c82c2c8fba1db26d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!483693784 &1658442209
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -7605,7 +7592,7 @@ GameObject:
   - component: {fileID: 1953656165}
   - component: {fileID: 1953656164}
   - component: {fileID: 1953656163}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall_BoxColieder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8397,9 +8384,8 @@ GameObject:
   - component: {fileID: 2022558799}
   - component: {fileID: 2022558803}
   - component: {fileID: 2022558802}
-  - component: {fileID: 2022558801}
   - component: {fileID: 2022558800}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -8457,18 +8443,6 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
---- !u!114 &2022558801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2022558798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3898ee683fe3944c82c2c8fba1db26d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!483693784 &2022558802
 TilemapRenderer:
   m_ObjectHideFlags: 0

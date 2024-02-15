@@ -12,20 +12,20 @@ public class Floor : MonoBehaviour
     {
         if (other.CompareTag("Monster"))
         {
-            monsterPresent = true;           
-        }        
+            monsterPresent = true;
+        }
 
-        if(other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            if(!enterPlayer)
+            if (!enterPlayer)
             {
-                Debug.Log("플레이어가 밟았다!enterPlayer"+enterPlayer);
+                Debug.Log("플레이어가 밟았다!enterPlayer" + enterPlayer);
                 MapManager.instance.monsterIndex++;
                 livingEnemyIndex = MapManager.instance.monsterIndex;
                 MapManager.instance.CreateMonster(gameObject.transform.position);
                 enterPlayer = true;
             }
-            CameraManager.instance.MoveCamera(gameObject.transform.position.x, gameObject.transform.position.y,-10);
+            CameraManager.instance.MoveCamera(gameObject.transform.position.x, gameObject.transform.position.y, -10);
         }
     }
 
@@ -34,29 +34,30 @@ public class Floor : MonoBehaviour
         if (other.CompareTag("Monster"))
         {
             livingEnemyIndex--;
-            if( livingEnemyIndex == 0 )
-            monsterPresent = false;           
+            if (livingEnemyIndex == 0)
+                monsterPresent = false;
         }
     }
 
     private void Start()
     {
-        
+
     }
-    
+
     private void FixedUpdate()
     {
         if (!monsterPresent)
             OpenDoor(false);
-        else if(monsterPresent)
+        else if (monsterPresent)
             OpenDoor(true);
     }
-    private void OpenDoor(bool door){
-        
+    private void OpenDoor(bool door)
+    {
+
         Transform doorTransform = transform.Find("Door");
         if (doorTransform != null)
-        {           
-            doorTransform.gameObject.SetActive(door);            
+        {
+            doorTransform.gameObject.SetActive(door);
         }
     }
 }

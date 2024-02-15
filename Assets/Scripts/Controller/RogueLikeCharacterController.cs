@@ -12,8 +12,9 @@ public class RogueLikeCharacterController : MonoBehaviour
     public event Action<AttackSO> OnAttackEvent;
     public event Action<AttackSO> OnSkillEvent;
 
-    private float _timeSinceLastAttack = float.MaxValue;
+    protected float _timeSinceLastAttack = float.MaxValue;
     protected bool IsAttacking { get; set; }
+    protected bool IsSkill { get; set; }
 
     protected CharacterStatsHandler Stats { get;private set; }
 
@@ -25,6 +26,7 @@ public class RogueLikeCharacterController : MonoBehaviour
     protected virtual void Update()
     {
         HandleAttackDelay();
+        HandleSkillDelay();
     }
 
     private void HandleAttackDelay()
@@ -41,6 +43,23 @@ public class RogueLikeCharacterController : MonoBehaviour
         {
             _timeSinceLastAttack = 0;
             CallAttackEvent(Stats.CurrentStats.attackSO);
+        }
+    }
+
+    private void HandleSkillDelay()
+    {
+        if (Stats.CurrentStats.skillSO == null)
+            return;
+
+        if (_timeSinceLastAttack <= Stats.CurrentStats.skillSO.delay)
+        {
+            _timeSinceLastAttack += Time.deltaTime;
+        }
+
+        if (IsSkill && _timeSinceLastAttack > Stats.CurrentStats.skillSO.delay)
+        {
+            _timeSinceLastAttack = 0;
+            CallSkillEvent();
         }
     }
 

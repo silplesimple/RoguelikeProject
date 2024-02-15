@@ -4,18 +4,14 @@ using UnityEngine;
 
 public class RogueLikeContactEnemyController : RogueLikeEnemyController
 {
-    [SerializeField][Range(0f, 100f)] private float followRange;
     [SerializeField] private AttackSO enemyAttackData;
+    [SerializeField][Range(0f, 100f)] private float followRange;
     private bool _isCollidingWithTarget;
 
     [SerializeField] private SpriteRenderer characterRenderer;
 
     private float _timeSinceLastAttack;
-
-    protected override void Start()
-    {
-        base.Start();
-    }
+    private bool _isAttacking;
 
     protected override void FixedUpdate()
     {
@@ -24,13 +20,16 @@ public class RogueLikeContactEnemyController : RogueLikeEnemyController
         Vector2 direction = Vector2.zero;
         float distanceToTarget = DistanceToTarget();
 
-        if (distanceToTarget < followRange)
+        if (!_isAttacking)
         {
-            direction = DirectionToTarget();
-
-            if (distanceToTarget <= enemyAttackData.size && _timeSinceLastAttack >= enemyAttackData.delay)
+            if (distanceToTarget < followRange)
             {
-                Attack();
+                direction = DirectionToTarget();
+
+                if (distanceToTarget <= enemyAttackData.size && _timeSinceLastAttack >= enemyAttackData.delay)
+                {
+                    StartCoroutine(AttackAndWait());
+                }
             }
         }
 
@@ -44,27 +43,39 @@ public class RogueLikeContactEnemyController : RogueLikeEnemyController
         characterRenderer.flipX = Mathf.Abs(rotZ) > 90f;
     }
 
-    private void Attack()
+    private IEnumerator AttackAndWait()
     {
- 
+        _isAttacking = true;
         _timeSinceLastAttack = 0f;
-
-      
-        HealthSystem playerHealth = ClosestTarget.GetComponent<HealthSystem>();
-        if (playerHealth != null)
-        {
-            playerHealth.ChangeHealth(-enemyAttackData.power);
-        }
 
         // 여기에 실제 공격하는 동작 추가
         Debug.Log("적의 공격!");
 
         // 추가: 공격 이후의 추가 동작 추가
+
+    
+
+        yield return new WaitForSeconds(0.5f); // 0.5초 동안 대기
+
+        _isAttacking = false;
+
+        // 0.5초 후에 다시 따라오면서 공격하는 동작 시작
+        StartCoroutine(FollowAndAttack());
+    }
+
+    private IEnumerator FollowAndAttack()
+    {
+        yield return new WaitForSeconds(0.5f); // 0.5초 동안 대기
+
+       
+        Debug.Log("다시 따라오며 공격!");
+
+        _isAttacking = false;
     }
 
     private void Update()
     {
-        // 공격 쿨다운 시간 업데이트
+      
         _timeSinceLastAttack += Time.deltaTime;
     }
 }

@@ -9,6 +9,8 @@ TagManager:
   - Room
   - Minimap
   - Item
+  - Monster
+  - Floor
   layers:
   - Default
   - TransparentFX

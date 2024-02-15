@@ -223,6 +223,7 @@ MonoBehaviour:
   Map: {fileID: 5499779902412023820, guid: 3154fbd5abc87dc45b4b319ea0df24d3, type: 3}
   monster: {fileID: 2203410884060838043, guid: fc03afc8c4006b447816640ed97d5fe4, type: 3}
   monsterIndex: 0
+  itemIndex: 0
   itemPrefab: {fileID: 2919680675615274376, guid: b848f0610a38c0c47a92f7c39d203aa2, type: 3}
 --- !u!4 &370084356
 Transform:
@@ -579,8 +580,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 457.13504, y: -144.73544}
-  m_SizeDelta: {x: 75.72992, y: 70.52911}
+  m_AnchoredPosition: {x: 385.5492, y: -21.000122}
+  m_SizeDelta: {x: 130.4006, y: 134.1626}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &735949990
 MonoBehaviour:
@@ -655,8 +656,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 254.13477, y: -144.73535}
-  m_SizeDelta: {x: 75.72992, y: 70.52911}
+  m_AnchoredPosition: {x: 35.999756, y: -20.999878}
+  m_SizeDelta: {x: 130.4006, y: 134.1626}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &989159091
 MonoBehaviour:
@@ -714,7 +715,6 @@ GameObject:
   - component: {fileID: 1086859617}
   - component: {fileID: 1086859616}
   - component: {fileID: 1086859615}
-  - component: {fileID: 1086859625}
   - component: {fileID: 1086859626}
   - component: {fileID: 1086859627}
   - component: {fileID: 1086859628}
@@ -917,20 +917,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1086859625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1086859614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3515fe0672aa2204489f1f46ff91b949, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetObjectName: Monster (2)
-  scenename: GameoverScene
 --- !u!61 &1086859626
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1036,8 +1022,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 355.13507, y: -144.73544}
-  m_SizeDelta: {x: 75.72992, y: 70.52911}
+  m_AnchoredPosition: {x: 209.9137, y: -21.000122}
+  m_SizeDelta: {x: 130.4006, y: 134.1626}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1483864703
 MonoBehaviour:

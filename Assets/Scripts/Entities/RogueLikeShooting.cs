@@ -20,6 +20,7 @@ public class RogueLikeShooting : MonoBehaviour
     {
         _projectileManager = ProjectileManager.instance;
         _controller.OnAttackEvent += OnShoot;
+        _controller.OnSkillEvent += OnMultipleShoot;
         _controller.OnLookEvent += OnAim;
     }
 
@@ -36,13 +37,27 @@ public class RogueLikeShooting : MonoBehaviour
 
         float minAngle = -(numberOfProjectilesPerShot / 2f) * projectilesAngleSpace + 0.5f * rangedAttackData.multipleProjectilesAngle;
 
-
         for (int i = 0; i < numberOfProjectilesPerShot; i++)
         {
             float angle = minAngle + projectilesAngleSpace * i;
             float randomSpread = Random.Range(-rangedAttackData.spread, rangedAttackData.spread);
             angle += randomSpread;
             CreateProjectile(rangedAttackData, angle);
+        }
+    }
+
+    private void OnMultipleShoot(AttackSO skillSO)
+    {
+        StartCoroutine(MultipleShoot(skillSO));
+    }
+
+    IEnumerator MultipleShoot(AttackSO skillSO)
+    {
+        int shootCount = 3;
+        for(int i = 0; i < shootCount; i++)
+        {
+            OnShoot(skillSO);
+            yield return new WaitForSeconds(0.05f);
         }
     }
 

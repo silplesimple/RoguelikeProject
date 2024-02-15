@@ -44,7 +44,13 @@ public class CharacterStatsHandler : MonoBehaviour
             attackSO = Instantiate(baseStats.attackSO);
         }
 
-        CurrentStats = new CharacterStats { attackSO = attackSO };
+        AttackSO skillSO = null;
+        if (baseStats.skillSO != null)
+        {
+            skillSO = Instantiate(baseStats.skillSO);
+        }
+
+        CurrentStats = new CharacterStats { attackSO = attackSO, skillSO = skillSO };
         UpdateStats((a, b) => b, baseStats);
         if (CurrentStats.attackSO != null)
         {

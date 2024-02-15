@@ -10,7 +10,6 @@ public class RogueLikeContactEnemyController : RogueLikeEnemyController
 
     [SerializeField] private SpriteRenderer characterRenderer;
 
-    private float _timeSinceLastAttack;
     private bool _isAttacking;
 
     protected override void FixedUpdate()

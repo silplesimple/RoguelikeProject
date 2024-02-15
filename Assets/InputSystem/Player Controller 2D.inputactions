@@ -35,7 +35,7 @@
                 {
                     "name": "Skill",
                     "type": "Value",
-                    "id": "e7c6b3ea-de49-463a-ab4c-5ccd655694de",
+                    "id": "f8b364d0-4205-4545-a7f9-dcd45bb77f8c",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -122,7 +122,7 @@
                 },
                 {
                     "name": "",
-                    "id": "87349bc7-629a-4b70-baab-d954a92f7992",
+                    "id": "e454a577-6f10-47fc-a3c3-b1946d195b45",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",

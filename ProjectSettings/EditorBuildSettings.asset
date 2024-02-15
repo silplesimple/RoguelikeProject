@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/sia/Scene/MainScene2.unity
     guid: bddda48a7ec428c4bb88ff42e2e93042
+  - enabled: 1
+    path: Assets/sia/Scene/GameoverScene.unity
+    guid: acbe528b967e7e34487cfff0a2e7f854
   m_configObjects: {}

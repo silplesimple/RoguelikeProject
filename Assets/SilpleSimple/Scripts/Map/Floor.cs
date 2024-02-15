@@ -15,7 +15,6 @@ public class Floor : MonoBehaviour
         {
             monsterPresent = true;           
         }        
-
         if(other.CompareTag("Player"))
         {
             if(!enterPlayer)
@@ -27,7 +26,7 @@ public class Floor : MonoBehaviour
                 MapManager.instance.CreateRandomItem(gameObject.transform.position);
                 enterPlayer = true;
             }
-            CameraManager.instance.MoveCamera(gameObject.transform.position.x, gameObject.transform.position.y,-10);
+            
         }
     }
 

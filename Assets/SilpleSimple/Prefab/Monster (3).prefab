@@ -224,6 +224,7 @@ MonoBehaviour:
     statsChangeType: 2
     maxHealth: 3
     speed: 2
+    healthRestorationAmount: 0
     attackSO: {fileID: 11400000, guid: 54352bfdedd4ddc45a2d9cde10a5e281, type: 2}
   statsModifiers: []
 --- !u!114 &6536755873963452151
@@ -251,7 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followRange: 20
-  targetTag: Player
+  enemyAttackData: {fileID: 11400000, guid: 54352bfdedd4ddc45a2d9cde10a5e281, type: 2}
   characterRenderer: {fileID: 4516866267632335530}
 --- !u!114 &3014517659639328135
 MonoBehaviour:

@@ -5,13 +5,26 @@ using UnityEngine;
 public class Floor : MonoBehaviour
 {
     private bool monsterPresent = false;
+    private bool enterPlayer = false;
+    private int livingEnemyIndex = 0;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Monster"))
         {
-            monsterPresent = true;
-            Debug.Log("몬스터 왔다!");
+            monsterPresent = true;           
+        }        
+
+        if(other.CompareTag("Player"))
+        {
+            if(!enterPlayer)
+            {
+                Debug.Log("플레이어가 밟았다!enterPlayer"+enterPlayer);
+                MapManager.instance.monsterIndex++;
+                livingEnemyIndex = MapManager.instance.monsterIndex;
+                MapManager.instance.CreateMonster(gameObject.transform.position);
+                enterPlayer = true;
+            }
         }
     }
 
@@ -19,33 +32,17 @@ public class Floor : MonoBehaviour
     {
         if (other.CompareTag("Monster"))
         {
-            monsterPresent = false;
-            Debug.Log("몬스터 없다!"+monsterPresent);
+            livingEnemyIndex--;
+            if( livingEnemyIndex == 0 )
+            monsterPresent = false;           
         }
     }
 
     private void Start()
     {
-        StartCoroutine(CheckMonsterAndOpenDoor());
+        
     }
-
-    IEnumerator CheckMonsterAndOpenDoor()
-    {
-        while (true)
-        {
-            yield return null;
-            if (!monsterPresent)
-            {                
-                OpenDoor(false);
-                yield break;
-            }
-            else if (monsterPresent)
-            {
-                OpenDoor(true);
-                yield break;
-            }
-        }
-    }
+    
     private void FixedUpdate()
     {
         if (!monsterPresent)
@@ -57,10 +54,8 @@ public class Floor : MonoBehaviour
         
         Transform doorTransform = transform.Find("Door");
         if (doorTransform != null)
-        {
-            
-            doorTransform.gameObject.SetActive(door);
-            
+        {           
+            doorTransform.gameObject.SetActive(door);            
         }
     }
 }

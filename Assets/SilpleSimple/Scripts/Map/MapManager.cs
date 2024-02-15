@@ -25,7 +25,7 @@ public class MapManager : MonoBehaviour
     private void Start()
     {
         CreateMap();
-        CreateRandomItem();
+        
     }
     public void CreateMonster(Vector2 direction)//ÁÂÇ¥¹Þ±â
     {

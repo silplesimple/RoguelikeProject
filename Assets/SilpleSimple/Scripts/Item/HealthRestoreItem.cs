@@ -15,7 +15,6 @@ public class HealthRestoreItem : MonoBehaviour
  
             OnPickup?.Invoke(restorationAmount);
    
-            Destroy(gameObject);
         }
     }
 }

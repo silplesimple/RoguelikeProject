@@ -9,6 +9,7 @@ public class MapManager : MonoBehaviour
     public GameObject monster;
     public int monsterIndex=0;
     private Vector3 SpawnPoint;
+    public GameObject itemPrefab;
 
     private void Awake()
     {
@@ -24,6 +25,7 @@ public class MapManager : MonoBehaviour
     private void Start()
     {
         CreateMap();
+        CreateRandomItem();
     }
     public void CreateMonster(Vector2 direction)//ÁÂÇ¥¹Þ±â
     {
@@ -37,5 +39,14 @@ public class MapManager : MonoBehaviour
     {
         SpawnPoint = new Vector3(0, 0);
         Instantiate(Map, SpawnPoint, Quaternion.identity);
+    }
+
+    public void CreateRandomItem()
+    {
+        Vector2 randomPosition = new Vector2(Random.Range(-6f, 6f), Random.Range(-4f, 4f)); // ·£´ý À§Ä¡ »ý¼º
+        if (itemPrefab != null)
+        {
+            Instantiate(itemPrefab, randomPosition, Quaternion.identity);
+        }
     }
 }

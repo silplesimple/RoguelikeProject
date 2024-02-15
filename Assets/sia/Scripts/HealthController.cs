@@ -28,8 +28,11 @@ public class HealthController : MonoBehaviour
 
             Hurt();
         }
-    }
-
+    if (other.gameObject.tag == "Item")
+    {
+        Heal(other);
+}
+}
     void Hurt()
     {
         if (rateOfHit < Time.time)
@@ -44,7 +47,19 @@ public class HealthController : MonoBehaviour
             SceneManager.LoadScene("GameOverScene");
         }
     }
+    void Heal(Collision2D otherCollision)
+    {
+        Debug.Log("힐!");
 
+        // 아이템 제거
+        Destroy(otherCollision.gameObject); // other는 충돌한 아이템을 나타냅니다.
+
+        if (qtdLife < life.Length)
+        {
+            life[qtdLife].SetActive(true);
+            qtdLife += 1;
+        }
+    }
 
 
 }

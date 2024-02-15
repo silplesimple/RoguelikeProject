@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/sia/StartScene.unity
     guid: 778e4889af3c99549990e6bdf8c36b09
   - enabled: 1
-    path: Assets/SilpleSimple/Scenes/MyScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/MainScene.unity
+    guid: a834d1a580cda0744be1744de864b619
   m_configObjects: {}

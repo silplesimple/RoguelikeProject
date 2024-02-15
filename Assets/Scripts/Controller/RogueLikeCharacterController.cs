@@ -80,8 +80,6 @@ public class RogueLikeCharacterController : MonoBehaviour
     
     public void CallSkillEvent()
     {
-        if (Stats.CurrentStats.skillSO == null)
-            return;
 
         AttackSO skillSO = Stats.CurrentStats.skillSO;
 

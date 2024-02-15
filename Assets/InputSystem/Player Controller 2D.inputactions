@@ -34,9 +34,9 @@
                 },
                 {
                     "name": "Skill",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "f8b364d0-4205-4545-a7f9-dcd45bb77f8c",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -126,7 +126,7 @@
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard&Mouse",
                     "action": "Skill",
                     "isComposite": false,
                     "isPartOfComposite": false

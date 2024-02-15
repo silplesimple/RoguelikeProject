@@ -2768,7 +2768,7 @@ GameObject:
   - component: {fileID: 7801350970436032885}
   - component: {fileID: 1753852286262887359}
   - component: {fileID: 8524473027251307400}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -3221,7 +3221,7 @@ GameObject:
   - component: {fileID: 5021507976965997651}
   - component: {fileID: 1103425772924294995}
   - component: {fileID: 4573187358465070082}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -3610,7 +3610,7 @@ GameObject:
   - component: {fileID: 4307534627971039248}
   - component: {fileID: 696096124554462114}
   - component: {fileID: 2937307649273546305}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall_BoxColieder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4323,7 +4323,7 @@ GameObject:
   - component: {fileID: 5408208741087954582}
   - component: {fileID: 833294751718261541}
   - component: {fileID: 8896963196170105200}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall_BoxColieder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5036,7 +5036,7 @@ GameObject:
   - component: {fileID: 8933312850603062283}
   - component: {fileID: 300230567608769134}
   - component: {fileID: 6264146557507049683}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -8455,7 +8455,7 @@ GameObject:
   - component: {fileID: 8574623631889700048}
   - component: {fileID: 832086190038798331}
   - component: {fileID: 4270960778162606183}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -8849,7 +8849,7 @@ GameObject:
   - component: {fileID: 6734199722750124134}
   - component: {fileID: 4707581420589003959}
   - component: {fileID: 5686172803080010439}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall_BoxColieder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12491,7 +12491,7 @@ GameObject:
   - component: {fileID: 2317257313949880249}
   - component: {fileID: 9188928652651768608}
   - component: {fileID: 2869864278238909554}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall_BoxColieder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16826,7 +16826,7 @@ GameObject:
   - component: {fileID: 2894987923304188054}
   - component: {fileID: 5631305603862222850}
   - component: {fileID: 5806240028884637856}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -17051,7 +17051,7 @@ GameObject:
   - component: {fileID: 7219481669209144249}
   - component: {fileID: 7353959621272163327}
   - component: {fileID: 1574895093229699123}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall_BoxColieder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

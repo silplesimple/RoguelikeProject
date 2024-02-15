@@ -5,7 +5,7 @@ using UnityEngine;
 public class MapManager : MonoBehaviour
 {
     public static MapManager instance;
-    [SerializeField] private GameObject Map;
+    [SerializeField] private GameObject[] map;
     public GameObject monster;
     public int monsterIndex=0;
     private Vector3 SpawnPoint;
@@ -37,8 +37,9 @@ public class MapManager : MonoBehaviour
     
     private void CreateMap()
     {
+        int randomIndex = Random.Range(0, map.Length);
         SpawnPoint = new Vector3(0, 0);
-        Instantiate(Map, SpawnPoint, Quaternion.identity);
+        Instantiate(map[randomIndex], SpawnPoint, Quaternion.identity);
     }
 
     public void CreateRandomItem()

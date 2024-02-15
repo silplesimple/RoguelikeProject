@@ -2,35 +2,66 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+
+
+public class EnemyController : MonoBehaviour
 {
-    public float CreateTime = 0.0f; // 생성되고 난 후 몇초가 지났는지
-    public float speed = 0.05f; // 점으로 이동하는 속도
-    public float moveTIme = 0.1f; // 작은 원들이 움직이기 시작하는 시간
-    public bool canmove = false; // 움직이는 불값
-    public int rotateSpeed;
+    public float moveSpeed = 3f;
+    public float detectionRange = 5f;
+    public float attackRange = 1f;
+    public int damage = 10; 
 
-    public GameObject target; // 이동할 위치 가져올 오브젝트
+    private Transform player;
+    private bool isAttacking = false;
 
-    private void Awake() // Start여도 상관은 없음
+    void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player"); // 게임이 실행되자 마자 Tag로 오브젝트를 target에 넣어줌
+       
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
-    private void Update()
+
+    void Update()
     {
-        Vector3 dir = target.transform.position - transform.position;
-        CreateTime += Time.deltaTime; // 생성되고 난 후의 시간을 더해줌
-        if (CreateTime >= moveTIme) // 생성된 시간이 움직일 수 있는 시간보다 많아지면 canmove true
-            canmove = true;
+       
+        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
+        
+        if (distanceToPlayer < detectionRange)
+        {
+          
+            transform.LookAt(player);
+            transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
 
+          
+            if (distanceToPlayer < attackRange)
+            {
+                
+                Attack();
+            }
+        }
+    }
 
-        if (canmove) // canmove = true
-            transform.position = Vector2.MoveTowards(gameObject.transform.position, target.transform.position, speed);
-        //이 오브젝트의 위치에 Vector2값을 계속 주어 target.transform.position으로 이동시킴 속도는 speed의 값의 크기로 이동
+    void Attack()
+    {
+        if (!isAttacking)
+        {
+            Debug.Log("공격!");
 
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+          
+            //player.GetComponent<PlayerHealth>().TakeDamage(damage);
 
+           
+            StartCoroutine(AttackCooldown());
+        }
+    }
+
+    IEnumerator AttackCooldown()
+    {
+       
+        isAttacking = true;
+        yield return new WaitForSeconds(1f); // 1초간 대기
+
+   
+        isAttacking = false;
     }
 }

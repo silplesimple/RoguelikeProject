@@ -44,6 +44,7 @@ public class HealthSystem : MonoBehaviour
 
     public bool ChangeHealth(float change)
     {
+        
         if (change == 0 || _timeSinceLastChange < healthChangeDelay)
         {
             return false;

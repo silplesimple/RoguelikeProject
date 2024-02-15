@@ -34,16 +34,14 @@ public class HealthController : MonoBehaviour
     {
         if (rateOfHit < Time.time)
         {
-            rateOfHit = Time.time+ cooldownHit;
-            Destroy(life[qtdLife - 1]);
+            rateOfHit = Time.time + cooldownHit;
+            life[qtdLife - 1].SetActive(false);
             qtdLife -= 1;
-          
         }
 
         if (qtdLife <= 0)
         {
             SceneManager.LoadScene("GameOverScene");
-
         }
     }
 

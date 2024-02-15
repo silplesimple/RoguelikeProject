@@ -10,6 +10,7 @@ public class RogueLikeCharacterController : MonoBehaviour
     public event Action<Vector2> OnMoveEvent;
     public event Action<Vector2> OnLookEvent;
     public event Action<AttackSO> OnAttackEvent;
+    public event Action<AttackSO> OnSkillEvent;
 
     private float _timeSinceLastAttack = float.MaxValue;
     protected bool IsAttacking { get; set; }
@@ -56,5 +57,15 @@ public class RogueLikeCharacterController : MonoBehaviour
     public void CallAttackEvent(AttackSO attackSO)
     {
         OnAttackEvent?.Invoke(attackSO);
+    }
+    
+    public void CallSkillEvent()
+    {
+        if (Stats.CurrentStats.skillSO == null)
+            return;
+
+        AttackSO skillSO = Stats.CurrentStats.skillSO;
+
+        OnSkillEvent?.Invoke(skillSO);
     }
 }

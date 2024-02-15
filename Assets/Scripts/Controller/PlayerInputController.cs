@@ -39,4 +39,10 @@ public class PlayerInputController : RogueLikeCharacterController
         //Debug.Log("OnFire" + value.ToString());
         IsAttacking = value.isPressed;
     }
+
+    public void OnSkill(InputValue value)
+    {
+        Debug.Log("스킬 사용" + value.ToString());
+        CallSkillEvent();
+    }
 }

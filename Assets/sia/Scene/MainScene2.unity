@@ -4171,6 +4171,7 @@ MonoBehaviour:
     speed: 5
     healthRestorationAmount: 0
     attackSO: {fileID: 11400000, guid: 7ae25dd2045519f43a5c14e3d5c4111b, type: 2}
+    skillSO: {fileID: 11400000, guid: 4b5492d86ceb6f94cb7396ba7794195a, type: 2}
   statsModifiers: []
 --- !u!114 &1086859619
 MonoBehaviour:

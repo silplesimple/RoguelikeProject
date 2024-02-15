@@ -19,4 +19,5 @@ public class CharacterStats
     public int healthRestorationAmount;
     // 공격 데이터
     public AttackSO attackSO;
+    public AttackSO skillSO;
 }

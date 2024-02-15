@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2415907546262418810}
   - component: {fileID: 6220573322386761677}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 3589868358257806187}
   - component: {fileID: 3579772362139802570}
   - component: {fileID: 7866137374314303249}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,5 +318,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelCollisionLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 256
   fxOnDestroy: 1

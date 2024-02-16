@@ -7,6 +7,7 @@ public class RogueLikeContactEnemyController : RogueLikeEnemyController
     [SerializeField] private AttackSO enemyAttackData;
     [SerializeField][Range(0f, 100f)] private float followRange;
     private bool _isCollidingWithTarget;
+    [SerializeField] private int enemyHp = 30;
 
     [SerializeField] private SpriteRenderer characterRenderer;
 
@@ -83,7 +84,7 @@ public class RogueLikeContactEnemyController : RogueLikeEnemyController
         {
             collisionCount++;
 
-            if (collisionCount >= 30)
+            if (collisionCount >= enemyHp)
             {
                 DestroyEnemy();
             }

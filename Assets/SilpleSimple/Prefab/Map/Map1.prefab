@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2752252508133454569}
   - component: {fileID: 254545800730546004}
   - component: {fileID: 3944153620045570390}
-  - component: {fileID: 5154982960572136506}
+  - component: {fileID: 6295827102290508354}
   m_Layer: 0
   m_Name: LivingBossFloor (2)
   m_TagString: Untagged
@@ -1650,7 +1650,7 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
---- !u!114 &5154982960572136506
+--- !u!114 &6295827102290508354
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1659,7 +1659,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 929182039162809934}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13b7d7c558b61004d9ac0833cdd5b306, type: 3}
+  m_Script: {fileID: 11500000, guid: 63d7d0e2ea6b8ef4b8fdcb193e7b2798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1035418105207977144

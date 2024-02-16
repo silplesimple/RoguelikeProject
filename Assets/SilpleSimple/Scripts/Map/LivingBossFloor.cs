@@ -9,7 +9,7 @@ public class LivingBossFloor : MonoBehaviour
         if (other.CompareTag("Monster"))
         {
             Debug.Log("º¸½º Á×¾úµû!");
-            //MapManger¿¡¼­ ¾À·Îµå
+            GameManager.instance.LoadClearScene();
         }
     }
 }

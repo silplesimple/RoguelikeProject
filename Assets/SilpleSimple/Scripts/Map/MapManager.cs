@@ -11,6 +11,7 @@ public class MapManager : MonoBehaviour
     private Vector3 SpawnPoint;
     public int itemIndex = 0;
     public GameObject itemPrefab;
+    public int livingEnemyIndex = 0;
 
     private void Awake()
     {
@@ -28,7 +29,7 @@ public class MapManager : MonoBehaviour
     {
         CreateMap();
 
-       
+        
         Vector2 monsterSpawnPosition = new Vector2(Random.Range(-6f, 6f), Random.Range(-4f, 4f));
         CreateMonster(monsterSpawnPosition);
     }

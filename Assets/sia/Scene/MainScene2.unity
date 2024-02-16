@@ -225,6 +225,7 @@ MonoBehaviour:
   - {fileID: 5499779902412023820, guid: 27dc7c72393c7fc4787077b73c621f4d, type: 3}
   monster: {fileID: 2203410884060838043, guid: fc03afc8c4006b447816640ed97d5fe4, type: 3}
   monsterIndex: 0
+  Boss: {fileID: 2203410884060838043, guid: 5e3b2525e66f2f548aa5a22c0302322f, type: 3}
   itemIndex: 0
   itemPrefab: {fileID: 2919680675615274376, guid: b848f0610a38c0c47a92f7c39d203aa2, type: 3}
   livingEnemyIndex: 0

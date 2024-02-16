@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/sia/Scene/GameoverScene.unity
     guid: acbe528b967e7e34487cfff0a2e7f854
+  - enabled: 1
+    path: Assets/sia/Scene/GameClearScene.unity
+    guid: 313b7b3ff37ed31439a145738e77bea1
   m_configObjects: {}

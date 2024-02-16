@@ -229,6 +229,7 @@ MonoBehaviour:
   itemIndex: 0
   itemPrefab: {fileID: 2919680675615274376, guid: b848f0610a38c0c47a92f7c39d203aa2, type: 3}
   livingEnemyIndex: 0
+  BossIndex: 0
 --- !u!4 &370084356
 Transform:
   m_ObjectHideFlags: 0
@@ -584,7 +585,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 385.5492, y: -21.000122}
+  m_AnchoredPosition: {x: 375, y: -44}
   m_SizeDelta: {x: 130.4006, y: 134.1626}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &735949990
@@ -660,7 +661,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 35.999756, y: -20.999878}
+  m_AnchoredPosition: {x: 36, y: -44}
   m_SizeDelta: {x: 130.4006, y: 134.1626}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &989159091
@@ -1027,7 +1028,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 209.9137, y: -21.000122}
+  m_AnchoredPosition: {x: 206, y: -44}
   m_SizeDelta: {x: 130.4006, y: 134.1626}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1483864703
@@ -1478,6 +1479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373570c2e13f6ec47b4f9731ad1df0c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameClear: 0
   playerTag: Player
 --- !u!4 &2098200701
 Transform:

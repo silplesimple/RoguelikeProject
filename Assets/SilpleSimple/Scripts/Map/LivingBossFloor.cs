@@ -9,6 +9,8 @@ public class LivingBossFloor : MonoBehaviour
         if (other.CompareTag("Monster"))
         {
             Debug.Log("º¸½º Á×¾úµû!");
+            GameManager.instance.GameClear = true;
+            if(GameManager.instance.GameClear)
             GameManager.instance.LoadClearScene();
         }
     }

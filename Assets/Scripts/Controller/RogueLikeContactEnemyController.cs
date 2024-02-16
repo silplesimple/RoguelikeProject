@@ -91,8 +91,7 @@ public class RogueLikeContactEnemyController : RogueLikeEnemyController
         }
     }
     private void DestroyEnemy()
-    {
-       
-        Destroy(this.gameObject);
+    {       
+        Destroy(this.gameObject);        
     }
 }

@@ -5,8 +5,7 @@ using UnityEngine;
 public class Floor : MonoBehaviour
 {
     private bool monsterPresent = false;
-    private bool enterPlayer = false;
-    private int livingEnemyIndex = 0;
+    private bool enterPlayer = false;    
     public Transform doorTransform ;
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -21,7 +20,7 @@ public class Floor : MonoBehaviour
             {
                 Debug.Log("플레이어가 밟았다!enterPlayer"+enterPlayer);
                 MapManager.instance.monsterIndex++;
-                livingEnemyIndex = MapManager.instance.monsterIndex;
+                MapManager.instance.livingEnemyIndex = MapManager.instance.monsterIndex;
                 MapManager.instance.CreateMonster(gameObject.transform.position);
                 MapManager.instance.CreateRandomItem(gameObject.transform.position);
                 enterPlayer = true;
@@ -32,12 +31,7 @@ public class Floor : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Monster"))
-        {
-            livingEnemyIndex--;
-            if( livingEnemyIndex == 0 )
-            monsterPresent = false;           
-        }
+        
     }
 
     private void Start()
@@ -48,6 +42,8 @@ public class Floor : MonoBehaviour
     private void FixedUpdate()
     {
         OpenDoor();
+        if (MapManager.instance.livingEnemyIndex == 0)
+            monsterPresent = false;
     }
     
     private void OpenDoor(){

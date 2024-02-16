@@ -7,6 +7,7 @@ public class CameraManager : MonoBehaviour
 {
     public static CameraManager instance;
     private Camera m_camera;
+
     private void Awake()
     {
         if (instance == null)

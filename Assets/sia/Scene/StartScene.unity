@@ -1069,6 +1069,7 @@ GameObject:
   - component: {fileID: 1297229755}
   - component: {fileID: 1297229754}
   - component: {fileID: 1297229753}
+  - component: {fileID: 1297229756}
   m_Layer: 5
   m_Name: ExitBtn
   m_TagString: Untagged
@@ -1140,7 +1141,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1297229754}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1297229756}
+        m_TargetAssemblyTypeName: ExitBtn, Assembly-CSharp
+        m_MethodName: ExitButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1297229754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1179,6 +1192,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1297229751}
   m_CullTransparentMesh: 1
+--- !u!114 &1297229756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297229751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 355559a1947a7064b811552177ac05cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1578451618
 GameObject:
   m_ObjectHideFlags: 0

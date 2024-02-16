@@ -50,6 +50,8 @@ public class HealthController : MonoBehaviour
 
         if (qtdLife <= 0)
         {
+            GameManager.instance.GameClear = false;
+            if(!GameManager.instance.GameClear)
             SceneManager.LoadScene("GameOverScene");
         }
     }

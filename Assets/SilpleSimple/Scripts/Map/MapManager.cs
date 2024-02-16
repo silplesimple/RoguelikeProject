@@ -13,6 +13,7 @@ public class MapManager : MonoBehaviour
     public int itemIndex = 0;
     public GameObject itemPrefab;
     public int livingEnemyIndex = 0;
+    public int BossIndex = 0;
 
     private void Awake()
     {
@@ -50,7 +51,7 @@ public class MapManager : MonoBehaviour
     }
     public void CreateBoss(Vector2 direction)
     {
-           Instantiate(Boss, direction, Quaternion.identity);                    
+            Instantiate(Boss, direction, Quaternion.identity);            
     }
 
     private void CreateMap()

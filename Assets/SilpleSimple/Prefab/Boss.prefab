@@ -254,7 +254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyAttackData: {fileID: 11400000, guid: 54352bfdedd4ddc45a2d9cde10a5e281, type: 2}
   followRange: 20
-  enemyHp: 200
+  enemyHp: 100
   characterRenderer: {fileID: 4516866267632335530}
 --- !u!114 &3014517659639328135
 MonoBehaviour:

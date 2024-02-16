@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public bool GameClear = false;
 
     public Transform Player {  get; private set; }
     [SerializeField] private string playerTag = "Player";

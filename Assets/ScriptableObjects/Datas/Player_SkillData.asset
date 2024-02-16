@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Player_SkillData
   m_EditorClassIdentifier: 
   size: 1
-  delay: 5
+  delay: 2
   power: 2
   speed: 10
   target:
     serializedVersion: 2
     m_Bits: 64
   isOnKnockback: 1
-  knockbackPower: 5
-  knockbackTime: 0.1
+  knockbackPower: 25
+  knockbackTime: 0.3
   bulletNameTag: Bullet
   duration: 5
   spread: 4

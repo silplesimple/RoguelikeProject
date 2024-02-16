@@ -11,7 +11,7 @@ public class RogueLikeContactEnemyController : RogueLikeEnemyController
     [SerializeField] private SpriteRenderer characterRenderer;
 
     private bool _isAttacking;
-
+    private int collisionCount = 0;
     protected override void FixedUpdate()
     {
         base.FixedUpdate();
@@ -76,5 +76,22 @@ public class RogueLikeContactEnemyController : RogueLikeEnemyController
     {
       
         _timeSinceLastAttack += Time.deltaTime;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Bullet"))
+        {
+            collisionCount++;
+
+            if (collisionCount >= 30)
+            {
+                DestroyEnemy();
+            }
+        }
+    }
+    private void DestroyEnemy()
+    {
+       
+        Destroy(this.gameObject);
     }
 }

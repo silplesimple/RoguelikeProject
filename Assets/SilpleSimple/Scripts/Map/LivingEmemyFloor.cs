@@ -8,7 +8,8 @@ public class LivingEmemyFloor : MonoBehaviour
         if (other.CompareTag("Monster"))
         {
             Debug.Log("몬스터 죽었다!!");
-            MapManager.instance.livingEnemyIndex--;            
+            MapManager.instance.livingEnemyIndex--;   
+            //MapManger에서 씬로드
         }
     }
 }

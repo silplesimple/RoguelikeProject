@@ -9,6 +9,7 @@ public class MapManager : MonoBehaviour
     public GameObject monster;
     public int monsterIndex = 0;
     private Vector3 SpawnPoint;
+    public GameObject Boss;    
     public int itemIndex = 0;
     public GameObject itemPrefab;
     public int livingEnemyIndex = 0;
@@ -46,6 +47,10 @@ public class MapManager : MonoBehaviour
             // 몬스터 옆에 아이템 생성
             CreateRandomItem(monsterPosition);
         }
+    }
+    public void CreateBoss(Vector2 direction)
+    {
+           Instantiate(Boss, direction, Quaternion.identity);                    
     }
 
     private void CreateMap()

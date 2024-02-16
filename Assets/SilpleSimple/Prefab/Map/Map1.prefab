@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3944153620045570390}
   - component: {fileID: 5154982960572136506}
   m_Layer: 0
-  m_Name: LivingEnemyFloor (2)
+  m_Name: LivingBossFloor (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29880,10 +29880,10 @@ GameObject:
   - component: {fileID: 7226645341575381458}
   - component: {fileID: 4532118404911212141}
   - component: {fileID: 3085565536536452778}
-  - component: {fileID: 8657384966797914303}
   - component: {fileID: 942921667542998228}
+  - component: {fileID: 7486379357303377302}
   m_Layer: 0
-  m_Name: Create_Enemy_Floor
+  m_Name: Create_Boos_Floor
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31234,19 +31234,6 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
---- !u!114 &8657384966797914303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7290871029249585528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8c017b21bc2df544b7e48853501c266, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorTransform: {fileID: 0}
 --- !u!50 &942921667542998228
 Rigidbody2D:
   serializedVersion: 4
@@ -31274,6 +31261,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &7486379357303377302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7290871029249585528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65d51513936d30746a2121e02c3c8f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorTransform: {fileID: 0}
 --- !u!1 &7794814407103467419
 GameObject:
   m_ObjectHideFlags: 0

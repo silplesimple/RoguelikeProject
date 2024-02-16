@@ -58,7 +58,7 @@ public class MapManager : MonoBehaviour
     public void CreateRandomItem(Vector2 monsterPosition)
     {
        
-        Vector2 randomOffset = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+        Vector2 randomOffset = new Vector2(Random.Range(-3f, 3f), Random.Range(-3f, 3f));
         Vector2 randomPosition = monsterPosition + randomOffset;
 
        
